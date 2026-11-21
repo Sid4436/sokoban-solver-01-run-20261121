@@ -550,8 +550,8 @@ function allFloor(g: Grid): number[] {
 }
 
 function main(): void {
-  const inputDir = process.argv[2] ?? "/input";
-  const outputDir = process.argv[3] ?? "/output";
+  const inputDir = process.argv[2] ?? process.env.MAKEFUN_INPUT_DIR ?? "/input";
+  const outputDir = process.argv[3] ?? process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
   const ids = ["i001", "i002", "i003", "i004", "i005"];
   for (const id of ids) {
     let solution = "";
